@@ -1,0 +1,8 @@
+class Stripe::Customer::Address
+  include JSON::Serializable
+  getter city : String?
+  getter country : String?
+  getter line1 : String?
+  getter postal_code : String?
+  getter state : String?
+end

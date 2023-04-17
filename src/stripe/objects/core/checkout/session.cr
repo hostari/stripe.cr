@@ -51,6 +51,7 @@ class Stripe::Checkout::Session
   getter client_reference_id : String?
   getter customer : String? | Stripe::Customer?
   getter customer_email : String?
+  getter customer_details : Stripe::Customer::Details?
 
   getter line_items : Array(Hash(String, String | Int32))?
 
