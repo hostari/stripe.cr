@@ -76,6 +76,9 @@ class Stripe::Invoice
   getter billing_reason : String?
   getter charge : String?
 
+  @[JSON::Field(converter: Time::EpochConverter)]
+  getter created : Time?
+
   getter payment_intent : String? | Stripe::PaymentIntent?
 
   @[JSON::Field(converter: Enum::StringConverter(Stripe::Invoice::CollectionMethod))]
