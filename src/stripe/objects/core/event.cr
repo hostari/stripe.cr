@@ -1,5 +1,6 @@
 # https://stripe.com/docs/api/events/object
 
+@[EventPayload]
 class Stripe::Event
   include JSON::Serializable
 
