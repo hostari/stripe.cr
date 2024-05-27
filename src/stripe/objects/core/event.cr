@@ -40,7 +40,5 @@ module Stripe::EventPayloadObjectConverter
     object_json = value.read_raw
     object_identifier = JSON.parse(object_json)["object"].to_s
     stripe_object_mapping[object_identifier].from_json(object_json)
-  rescue
-    puts value.read_raw
   end
 end
