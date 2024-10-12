@@ -27,7 +27,7 @@ jobs:
     continue-on-error: ${{ matrix.experimental }}
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - uses: crystal-lang/install-crystal@v1
         with:
@@ -38,7 +38,7 @@ jobs:
         if: matrix.crystal_version == 'latest'
 
       - name: Set up Crystal cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         id: crystal-cache
         with:
           path: |
